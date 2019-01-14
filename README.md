@@ -88,5 +88,5 @@ All the results are based on `n_history = 2`:
 | DrQA | 55.6 | 46.2 |
 | pipeline | 65.0 | 54.9 |
 | ------------- | ------------- | ------------- |
-| pipeline | 49.49 | 38.69 |
+| fasttext only | 49.49 | 38.69 |
 
