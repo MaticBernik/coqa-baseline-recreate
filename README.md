@@ -34,13 +34,13 @@ rc/main.py ---> set:  batch_size = 25,  max_epochs = 30
 v rc\word_model.py
 nadomestimo
 ```python
-	for line in input_file.readlines():
-                splitLine = line.split(' ')
+for line in input_file.readlines():
+	splitLine = line.split(' ')
 ```
 z
 ```python
   for line in input_file.readlines()[1:]:
-                splitLine = line.rstrip().split(' ')
+        splitLine = line.rstrip().split(' ')
 ```
 
 pri predprocesiranju uporabimo dodaten flag: -type word2vec
@@ -60,7 +60,7 @@ pri predprocesiranju uporabimo dodaten flag: -type word2vec
   PYTHONPATH=seq2seq python seq2seq/tools/embeddings_to_torch.py -emb_file_enc wordvecs/glove.42B.300d.txt -emb_file_dec wordvecs/glove.42B.300d.txt -dict_file data/seq2seq-pipeline.vocab.pt -output_file data/seq2seq-pipeline.embed -type word2vec
 ```
 
-### Trening
+### Ucenje
 
 ```bash
   python rc/main.py --trainset data/coqa.train.pipeline.json --devset data/coqa.dev.pipeline.json --n_history 2 --dir pipeline_models --embed_file wordvecs/glove.42B.300d.txt --predict_raw_text n
@@ -74,6 +74,8 @@ pri predprocesiranju uporabimo dodaten flag: -type word2vec
   python seq2seq/translate.py -model pipeline_models/seq2seq_copy_acc_84.77_ppl_2.21_e30.pt -src pipeline_models/pipeline-seq2seq-src.txt -output pipeline_models/pred.txt -replace_unk -verbose -gpu 0
   python scripts/gen_seq2seq_output.py --data_file data/coqa-dev-v1.0.json --pred_file pipeline_models/pred.txt --output_file pipeline_models/pipeline.prediction.json
 ```
+
+Cas predprocesiranja in ucenja na GTX 1060 6 GB ~ 20h
 
 ## Rezultati
 
