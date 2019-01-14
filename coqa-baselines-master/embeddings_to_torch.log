@@ -1,0 +1,38 @@
+[2019-01-06 16:48:14,145 INFO] From: data/seq2seq-h2.vocab.pt
+[2019-01-06 16:48:14,145 INFO] 	* source vocab: 50002 words
+[2019-01-06 16:48:14,145 INFO] 	* target vocab: 33978 words
+[2019-01-06 16:50:45,316 INFO] Got 1917495 encryption embeddings from wordvecs/glove.42B.300d.txt
+[2019-01-06 17:19:14,012 INFO] Got 1917495 decryption embeddings from wordvecs/glove.42B.300d.txt
+[2019-01-06 17:19:39,109 INFO] 
+Matching: 
+[2019-01-06 17:19:39,112 INFO] 	* enc: 46309 match, 3693 missing, (92.61%)
+[2019-01-06 17:19:39,113 INFO] 	* dec: 31695 match, 2283 missing, (93.28%)
+[2019-01-06 17:19:39,113 INFO] 
+Filtered embeddings:
+[2019-01-06 17:19:39,115 INFO] 	* enc: torch.Size([50002, 300])
+[2019-01-06 17:19:39,115 INFO] 	* dec: torch.Size([33978, 300])
+[2019-01-06 17:19:39,115 INFO] 
+Saving embedding as:
+	* enc: data/seq2seq-h2.embed.enc.pt
+	* dec: data/seq2seq-h2.embed.dec.pt
+[2019-01-06 17:19:39,166 INFO] 
+Done.
+[2019-01-13 16:36:11,998 INFO] From: data/seq2seq-pipeline.vocab.pt
+[2019-01-13 16:36:11,999 INFO] 	* source vocab: 47388 words
+[2019-01-13 16:36:11,999 INFO] 	* target vocab: 33978 words
+[2019-01-13 16:38:36,800 INFO] Got 1917495 encryption embeddings from wordvecs/glove.42B.300d.txt
+[2019-01-13 16:56:56,222 INFO] Got 1917495 decryption embeddings from wordvecs/glove.42B.300d.txt
+[2019-01-13 16:57:17,162 INFO] 
+Matching: 
+[2019-01-13 16:57:17,163 INFO] 	* enc: 43404 match, 3984 missing, (91.59%)
+[2019-01-13 16:57:17,163 INFO] 	* dec: 31695 match, 2283 missing, (93.28%)
+[2019-01-13 16:57:17,163 INFO] 
+Filtered embeddings:
+[2019-01-13 16:57:17,165 INFO] 	* enc: torch.Size([47388, 300])
+[2019-01-13 16:57:17,166 INFO] 	* dec: torch.Size([33978, 300])
+[2019-01-13 16:57:17,166 INFO] 
+Saving embedding as:
+	* enc: data/seq2seq-pipeline.embed.enc.pt
+	* dec: data/seq2seq-pipeline.embed.dec.pt
+[2019-01-13 16:57:17,220 INFO] 
+Done.
